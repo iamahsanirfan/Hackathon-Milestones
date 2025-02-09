@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Resume Builder Form -->
+  <div class="form-container">
+    <h1>Dynamic Resume Builder</h1>
+    <form id="resume-form">
+      <!-- Profile Picture -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="profile-picture">Profile Picture:</label>
+          <input type="file" id="profile-picture" accept="image/*" />
+        </div>
+      </div>
+      <!-- Career Objective -->
+      <div class="form-group">
+        <label for="career-objective">Career Objective:</label>
+        <textarea id="career-objective" placeholder="Enter your career objective" required></textarea>
+      </div>
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" placeholder="Enter your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email (must be @gmail.com):</label>
+            <input type="email" id="email" placeholder="Enter your Gmail address" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Enter your address" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required />
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn Profile URL:</label>
+            <input type="url" id="linkedin" placeholder="Enter your LinkedIn profile URL" required />
+          </div>
+        </div>
+      </fieldset>
+      <!-- Education -->
+      <fieldset>
+        <legend>Education</legend>
+        <div class="form-group">
+          <label for="education1">Education 1 (Required):</label>
+          <input type="text" id="education1" placeholder="e.g., SSC from Guidance Schooling System 2022" required />
+        </div>
+        <div class="form-group">
+          <label for="education2">Education 2 (Optional):</label>
+          <input type="text" id="education2" placeholder="e.g., ICS from Govt College (Expected completion in 2026)" />
+        </div>
+      </fieldset>
+      <!-- Skills -->
+      <fieldset>
+        <legend>Skills</legend>
+        <div class="form-group">
+          <label for="skill1">Skill 1 (Required):</label>
+          <input type="text" id="skill1" placeholder="e.g., TypeScript" required />
+        </div>
+        <div class="form-group">
+          <label for="skill2">Skill 2 (Optional):</label>
+          <input type="text" id="skill2" placeholder="e.g., HTML" />
+        </div>
+        <div class="form-group">
+          <label for="skill3">Skill 3 (Optional):</label>
+          <input type="text" id="skill3" placeholder="e.g., Next.js" />
+        </div>
+        <div class="form-group">
+          <label for="skill4">Skill 4 (Optional):</label>
+          <input type="text" id="skill4" placeholder="e.g., CSS" />
+        </div>
+        <div class="form-group">
+          <label for="skill5">Skill 5 (Optional):</label>
+          <input type="text" id="skill5" placeholder="e.g., Photoshop" />
+        </div>
+      </fieldset>
+      <!-- Experience -->
+      <div class="form-group">
+        <label for="experience">Experience:</label>
+        <textarea id="experience" placeholder="Describe your experience" required></textarea>
+      </div>
+      <!-- Submit Button -->
+      <div class="form-group center">
+        <button type="submit">Generate Resume</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Resume Preview -->
+  <div id="resume-preview" class="resume-preview hidden">
+    <header>
+      <div class="header-container">
+        <img id="preview-profile-img" src="" alt="Profile Picture" />
+        <div class="header-text">
+          <h1 id="preview-full-name"></h1>
+          <p id="preview-title">Dynamic Resume</p>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="section" id="preview-career-objective">
+        <h2>Career Objective</h2>
+        <p></p>
+      </section>
+      <section class="section" id="preview-personal-info">
+        <h2>Personal Information</h2>
+        <ul>
+          <li><strong>Email:</strong> <span id="preview-email"></span></li>
+          <li><strong>Age:</strong> <span id="preview-age"></span></li>
+          <li><strong>Address:</strong> <span id="preview-address"></span></li>
+          <li><strong>Phone:</strong> <span id="preview-phone"></span></li>
+          <li>
+            <strong>LinkedIn:</strong>
+            <a id="preview-linkedin" href="#" target="_blank">Visit Profile</a>
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="preview-education">
+        <h2>Education</h2>
+        <ul>
+          <li id="preview-education1"></li>
+          <li id="preview-education2"></li>
+        </ul>
+      </section>
+      <section class="section" id="preview-skills">
+        <h2>Skills</h2>
+        <button id="toggle-skills">Show Skills</button>
+        <ul id="skills-list" style="display: none;">
+          <li id="preview-skill1"></li>
+          <li id="preview-skill2"></li>
+          <li id="preview-skill3"></li>
+          <li id="preview-skill4"></li>
+          <li id="preview-skill5"></li>
+        </ul>
+      </section>
+      <section class="section" id="preview-experience">
+        <h2>Experience</h2>
+        <p></p>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

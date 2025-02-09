@@ -1,0 +1,178 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+/* Container Styles */
+.form-container, .resume-preview {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Form Header */
+.form-container h1 {
+  text-align: center;
+  color: #e60000;
+  margin-bottom: 20px;
+}
+
+/* Form Rows for Side-by-Side Layout */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 280px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #e60000;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid #e60000;
+  border-radius: 5px;
+  background: #2a2a2a;
+  color: #fff;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff3333;
+  outline: none;
+}
+
+/* Fieldset Styles */
+fieldset {
+  border: 1px solid #e60000;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+legend {
+  padding: 0 10px;
+  color: #e60000;
+  font-weight: bold;
+}
+
+/* Center Button */
+.center {
+  text-align: center;
+}
+
+/* Button Styles */
+button {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ff3333;
+}
+
+/* Resume Preview Header */
+.resume-preview header {
+  background: #e60000;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-right: 20px;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.header-text p {
+  margin: 5px 0 0 0;
+  font-size: 1.2em;
+}
+
+/* Container for Resume Content */
+.container {
+  padding: 20px;
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+
+h2 {
+  color: #e60000;
+  border-bottom: 2px solid #e60000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #e60000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Download Button Container */
+.download-btn {
+  margin-top: 20px;
+}
